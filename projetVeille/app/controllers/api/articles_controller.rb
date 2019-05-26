@@ -41,7 +41,7 @@ class Api::ArticlesController < ApplicationController
 
     # GET /articles/:id/comments
     def get_comments
-        render json: {status: 'SUCCESS', message: 'Loaded comments', data: @article.comments}, status: :ok
+        render json: @article.comments
     end
 
     private
