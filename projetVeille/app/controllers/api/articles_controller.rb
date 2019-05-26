@@ -51,7 +51,6 @@ class Api::ArticlesController < ApplicationController
     end
 
     def article_params
-        params.permit(:title, :content, :created_by)
+        params.permit(:title, :content, :created_by, :category_id)
     end
-
 end
