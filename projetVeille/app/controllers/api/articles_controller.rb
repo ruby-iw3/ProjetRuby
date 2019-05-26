@@ -39,6 +39,11 @@ class Api::ArticlesController < ApplicationController
         render json: {status: 'SUCCESS', message: 'Deleted article', data: @article}, status: :ok
     end
 
+    # GET /articles/:id/comments
+    def get_comments
+        render json: {status: 'SUCCESS', message: 'Loaded comments', data: @article.comments}, status: :ok
+    end
+
     private
 
     def set_article
