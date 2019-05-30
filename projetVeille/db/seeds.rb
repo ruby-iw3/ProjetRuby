@@ -7,57 +7,57 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 3.times do
 	Category.create({
-		title: Faker::ChuckNorris.fact
+		title: Faker::Book.genre
 	})
 end
 
-2.times do
-    Article.create({
-        title: Faker::Book.title,
-        content: Faker::Lorem.sentence,
-        created_by: Faker::Book.author,
-        category_id: 1
-    })
-end
+#2.times do
+#    Article.create({
+ #       title: Faker::Book.title,
+  #      content: Faker::Lorem.sentence,
+   #     created_by: Faker::Book.author,
+    #    category_id: 1
+    #})
+#end
 
-2.times do
-    Article.create({
-        title: Faker::Book.title,
-        content: Faker::Lorem.sentence,
-        created_by: Faker::Book.author,
-        category_id: 2
-    })
-end
+#2.times do
+ #   Article.create({
+  #      title: Faker::Book.title,
+   #     content: Faker::Lorem.sentence,
+    #    created_by: Faker::Book.author,
+     #   category_id: 2
+    #})
+#end
 
-2.times do
-    Article.create({
-        title: Faker::Book.title,
-        content: Faker::Lorem.sentence,
-        created_by: Faker::Book.author,
-        category_id: 3
-    })
-end
+#2.times do
+ #   Article.create({
+  #      title: Faker::Book.title,
+   #     content: Faker::Lorem.sentence,
+    #    created_by: Faker::Book.author,
+     #   category_id: 3
+    #})
+#end
 
-4.times do
-	Comment.create({
-		name: Faker::GreekPhilosophers.name,
-		message: Faker::GreekPhilosophers.quote,
-		article_id: 1
-	})
-end
+#4.times do
+#	Comment.create({
+#		name: Faker::GreekPhilosophers.name,
+#		message: Faker::GreekPhilosophers.quote,
+#		article_id: 1
+#	})
+#end
 
-1.times do
-	Comment.create({
-		name: Faker::GreekPhilosophers.name,
-		message: Faker::GreekPhilosophers.quote,
-		article_id: 2
-	})
-end
+#1.times do
+#	Comment.create({
+#		name: Faker::GreekPhilosophers.name,
+#		message: Faker::GreekPhilosophers.quote,
+#		article_id: 2
+#	})
+#end
 
-2.times do
-	Comment.create({
-		name: Faker::GreekPhilosophers.name,
-		message: Faker::GreekPhilosophers.quote,
-		article_id: 3
-	})
-end
+#2.times do
+#	Comment.create({
+#		name: Faker::GreekPhilosophers.name,
+#		message: Faker::GreekPhilosophers.quote,
+#		article_id: 3
+#	})
+#end

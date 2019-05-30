@@ -1,6 +1,5 @@
 class Article < ApplicationRecord
-    validates_presence_of :title, :content, :created_by, :category_id
+    validates_presence_of :title, :content, :created_by
 
-    has_many :comments
-    belongs_to :category
+    has_many :comments, dependent: :destroy
 end

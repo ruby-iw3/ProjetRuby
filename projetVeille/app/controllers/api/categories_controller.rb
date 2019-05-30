@@ -8,7 +8,7 @@ class Api::CategoriesController < ApplicationController
         render json: {status: 'SUCCESS', message: 'Loaded categories', data: @categories}, status: :ok
     end
 
-    # GET /category/:id
+    # GET /categories/:id
     def show
         render json: {status: 'SUCCESS', message: 'Loaded category', data: @category}, status: :ok
     end
