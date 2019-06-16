@@ -11,3 +11,6 @@ rake db:test:prepare
 
 ## Exécuter les tests
 bundle exec rspec
+
+## Exécuter les tests User
+bundle exec rspec spec/auth -fd
