@@ -14,5 +14,5 @@ class ApplicationController < ActionController::API
     end
 
     # À chaque appel, l'application vérifiera la demande en appelant le service d'autorisation de demande.
-    # Si la demande est autorisée, l'objet utilisateur actuel sera utilisé dans les autres contrôleurs.
+    # Si la demande est autorisée, l'objet current_user sera utilisé dans les autres contrôleurs.
 end
