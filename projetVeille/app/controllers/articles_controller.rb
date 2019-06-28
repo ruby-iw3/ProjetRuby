@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
     before_action :set_article, only: [:show, :update, :destroy, :get_comments]
 
+
     # GET /articles
     def index
         @articles = Article.order('created_at DESC')
@@ -51,7 +52,7 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-        params.permit(:title, :content, :created_by)
+        params.permit(:title, :content, :created_by, :category_id)
     end
 
 end

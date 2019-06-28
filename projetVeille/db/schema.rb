@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_06_02_140427) do
   create_table "articles_categories", id: false, force: :cascade do |t|
     t.integer "category_id", null: false
     t.integer "article_id", null: false
+    t.index ["article_id", "category_id"], name: "index_articles_categories_on_article_id_and_category_id"
     t.index ["category_id", "article_id"], name: "index_articles_categories_on_category_id_and_article_id"
   end
 
