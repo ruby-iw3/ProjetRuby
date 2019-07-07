@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
     # GET /articles
     def index
-        @articles = Article.order('created_at DESC')
+        @articles = Article.paginate(page: params[:page], per_page: 5).order('created_at DESC')
 
         render json: {status: 'SUCCESS', message: 'Loaded articles', data: @articles}, status: :ok
     end

@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 
 	# GET /categories
     def index
-        @categories = Category.order('created_at DESC')
+        @categories = Category.paginate(page: params[:page], per_page: 5).order('created_at DESC')
 
         json_response(@categories)
     end

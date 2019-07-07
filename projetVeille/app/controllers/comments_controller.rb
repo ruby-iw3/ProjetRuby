@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
     # GET /comments
     def index
-        @comments = Comment.order('created_at DESC')
+        @comments = Comment.paginate(page: params[:page], per_page: 5).order('created_at DESC')
 
         render json: {status: 'SUCCESS', message: 'Loaded comments', data: @comments}, status: :ok
     end
