@@ -3,7 +3,10 @@ class CategoriesController < ApplicationController
 
 	# GET /categories
     def index
-        @categories = Category.paginate(page: params[:page], per_page: 5).order('created_at DESC')
+        @categories = Category.paginate(page: params[:page]).order('created_at ASC')
+        @sumcategories = Category.count(:id)
+
+        response.set_header("Content-Range", @sumcategories)
 
         json_response(@categories)
     end
